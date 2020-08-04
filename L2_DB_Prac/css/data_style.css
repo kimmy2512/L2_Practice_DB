@@ -1,0 +1,153 @@
+body {
+    margin: auto;
+    padding: 50px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* hide message if browser supports grid */
+@supports(display:grid) {
+    .message{
+        display: none;
+    }
+}
+
+/* message styling if grid not supported */
+.message {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+
+/* Set up grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo banner"
+        "side main"
+        "foot foot";
+        
+    background-color: #fff;
+    grid-gap: 4px;
+    }
+
+
+.box {
+    background-color: #444; /* dark grey */
+    border-radius: 5px;
+    padding: 20px;
+    }
+
+
+/* make logo and banner the same colour */
+.logo, .main {
+    background-color: #dfcfbc;  /* beige */
+}
+
+.banner, .side {
+    background-color: #d6d3d7; /* blue grey */
+}
+
+
+.logo {
+    grid-area: logo;
+    height: 150px;
+    border-radius: 0 5px 5px 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    
+}
+
+.banner {
+    grid-area: banner;
+    vertical-align: middle;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+    max-height: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.main {
+    grid-area: main;
+    color: #000;
+}
+
+.side {
+    grid-area: side;
+    font-size: 14px;
+}
+
+.footer {
+    grid-area: foot;
+    text-align: right;
+    color: #fff;
+    background-color: #636263;
+}
+
+
+/*** Headings ***/
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.sub_heading {
+    font-family: 'Ubuntu', sans-serif;
+    color: #593849;
+    font-weight: bold;
+}
+
+/***** Links *****/
+
+/* links in page */
+
+a:link{color: #d6d3d7;}
+a:visited{color: #ccc;}
+a:hover{color: #dfcfbc;}
+
+/* side links */
+a.side {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    text-decoration: none;
+}
+a.side:link, a.side:visited {color: #636263;}
+a.side:hover {color:#8a1737; }
+
+
+/**** Results ****/
+
+.results {
+    background-color: #f4ebe1;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+
+.error {
+    background-color: #ffe0ed;
+    border: 2px solid #8a1737;
+    color: #8a1737;
+    border-radius: 5px;
+    padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
