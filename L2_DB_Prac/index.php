@@ -5,28 +5,11 @@
             
             
             <p>
-                Put link to original dataset here
+                This database includes some of the most popular apps available for mobile devices. The <a href="https://www.kaggle.com/tristan581/17k-apple-app-store-strategy-games/version/1">original dataset</a> can be found at the preceding link.
             </p>
             
 
             
         </div> <!-- / main -->
         
-        <div class="box side">
-           
-           <h2>Search Area</h2>
-           
-           <p>This is where the search area goes
-
-            
-        </div> <!-- / side bar -->
-        
-        <div class="box footer">
-            CC GTT 20XX
-        </div> <!-- / footer -->
-                
-        
-    </div> <!-- / wrapper -->
-    
-            
-</body>
+    <?php include("bottombit.php") ?>
