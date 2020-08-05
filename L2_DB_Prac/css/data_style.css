@@ -109,9 +109,9 @@ h1, h2, h3, h4 {
 
 /* links in page */
 
-a:link{color: #d6d3d7;}
-a:visited{color: #ccc;}
-a:hover{color: #dfcfbc;}
+a:link{color: #264306;}
+a:visited{color: #5b7f31;}
+a:hover{color: #8F5F14;}
 
 /* side links */
 a.side {
@@ -141,8 +141,10 @@ a.side:hover {color:#8a1737; }
     padding: 20px;
     }
 
-
-
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 
 
