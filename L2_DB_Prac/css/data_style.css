@@ -146,7 +146,29 @@ a.side:hover {color:#8a1737; }
     flex-wrap: nowrap;
 }
 
+/* Star Rating CSS */
+/* Source: https://codepen.io/Bluetidepro/pen/GkEa */
 
+.star-ratings-sprite {
+    background: url("../images/star-rating-sprite.png") repeat-x;
+    font-size: 0;
+    height: 21px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 110px;
+/* margin: 0 auto; */
+
+}
+
+.star-ratings-sprite-rating {
+    background: url("../images/star-rating-sprite.png") repeat-x;
+    background-position: 0%
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display: block;
+}
 
 
 

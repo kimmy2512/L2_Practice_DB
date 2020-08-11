@@ -70,27 +70,57 @@
                         }
                     ?>
                 
-                </div>
+                </div>  <!-- / heading div -->
+                
                 <!-- / Heading and subtitle -->
                 
-                <p>
+                <!--- / Ratings Area -->
                 
-                    <b>Genre</b>:
-                    <?php echo $find_rs['Genre'] ?>
+                <div class="flex-container">
                     
-                    <br />
+                    <!-- Partial Stars Original Source: hhtps://codepen.io/Bluetidepro/pen/GkpEa --> <div class="star-ratings-sprite">
+                    <span style="width:52%" class="star-ratings-sprite-rating"></span>
                     
-                    <b>Developer</b>:
-                    <?php echo $find_rs['DevName'] ?>
+                    </div>  <!-- / star rating div -->
                     
-                    <br />
-                    <b>Rating</b>: <?php echo $find_rs['User Rating'] ?> (based on <?php echo $find_rs['Rating Count'] ?> votes)
+                    <div class="actual-rating">
+                        (<?php echo $find_rs['User Rating'] ?> based on <?php echo number_format($find_rs['Rating Count']) ?> ratings)
                     
+                    </div>   <!-- / text rating div -->
+                    
+                </div> <!-- / ratings flexbox -->
+                
+                <!--- / Ratings Area -->
+               
+                <!-- Price -->  
+                
+                <?php 
+                
+                    if($find_rs['Price'] == 0) {  // instead of indenting, {} shows the conditions required for something, something like the if statements -->
+                        ?>
+                    <p>
+                        Free!
+                        <?php
+                            if($find_rs['In App'] == 1)
+                            {
+                                ?>
+                                    (In App Purchase)
+                                <?php
+                                
+                            }   // end In App if
+                
+                        ?>
+                        
+                </p>  <!-- opening and closing paragraph statements -->
+                
+                    <?php     
+                    }  // end price if
+                    
+                    ?>
+                
                 </p>
-                <hr />
-                <?php echo $find_rs['Description'] ?>
                 
-            </div>  <!-- / results -->
+             </div>     <!-- / results -->
             
             <br />
             

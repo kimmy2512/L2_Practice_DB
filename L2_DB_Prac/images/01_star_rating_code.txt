@@ -1,0 +1,23 @@
+| ***** Star Rating Code ***** |
+Source: https://codepen.io/Bluetidepro/pen/GkEa
+
+html...
+<div class="star-ratings-sprite"><span style="width:52%" class="star-ratings-sprite-rating"></span></div>
+
+css
+.star-ratings-sprite {
+background: url("../images/star-rating-sprite.png") repeat-x;
+font-size: 0;
+height: 21px;
+line-height: 0;
+overflow: hidden;
+text-indent: -999em;
+width: 110px;
+/* margin: 0 auto; */
+
+}
+
+.star-ratings-sprite-rating {
+background: url("../images/star-rating-sprite.png") repeat-x;
+background-position: 0%
+background-position: 0 100%;
