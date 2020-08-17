@@ -79,7 +79,7 @@
                 <div class="flex-container">
                     
                     <!-- Partial Stars Original Source: hhtps://codepen.io/Bluetidepro/pen/GkpEa --> <div class="star-ratings-sprite">
-                    <span style="width:52%" class="star-ratings-sprite-rating"></span>
+                    <span style="width:<?php echo $find_rs['User Rating'] / 5 * 100; ?>%" class="star-ratings-sprite-rating"></span>
                     
                     </div>  <!-- / star rating div -->
                     
