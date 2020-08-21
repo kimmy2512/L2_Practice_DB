@@ -106,13 +106,13 @@
             <p>
                 <!-- Developer, Genre and Age... -->
                 <b>Developer:</b> <?php echo $find_rs['DevName'] ?><br />
-                <b>Genre:</b> <?php echo $find_rs['GenreName'] ?><br />
-                Suitable for ages <b><?php echo $find_rs['Age Rating'] ?></b> and up
+                <b>Genre:</b> <?php echo $find_rs['Genre'] ?><br />
+                Suitable for ages <b><?php echo $find_rs['Age'] ?></b> and up
                 
             </p>
             
             <p>
-                <i>Description goes here...</i>    
+                <i><?php echo $find_rs['Description'] ?></i>    
             </p>
                 
              </div>     <!-- / results -->
