@@ -170,6 +170,30 @@ a.side:hover {color:#8a1737; }
     display: block;
 }
 
+/* Side form formatting */
+.searchform {
+    width: 250px;
+    margin: 5px;
+}
+
+.search {
+    padding:8px 15px;
+    background:#fff;
+    border:0px solid #dbdbdb;
+    width: 200px;
+}
+
+.submit {
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position:relative;
+    width: 45px;
+    left:-1px;
+    background-color: #636263;
+    color:#d6d3d7;
+    border: 1px solid #636263;
+    border-radius: 0 5px 5px 0;
+}
+
 
 
 
