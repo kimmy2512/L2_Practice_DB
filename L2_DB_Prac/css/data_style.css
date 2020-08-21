@@ -163,7 +163,7 @@ a.side:hover {color:#8a1737; }
 
 .star-ratings-sprite-rating {
     background: url("../images/star-rating-sprite.png") repeat-x;
-    background-position: 0%
+    background-position: 0%;
     background-position: 0 100%;
     float: left;
     height: 21px;
