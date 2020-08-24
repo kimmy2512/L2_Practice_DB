@@ -194,7 +194,22 @@ a.side:hover {color:#8a1737; }
     border-radius: 0 5px 5px 0;
 }
 
+input[type="submit"]:hover {
+    background-color: #000;
+}
 
+input.search[type=text], select {
+    width: 200px;
+    
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
 
 
