@@ -5,6 +5,16 @@
     $genre = mysqli_real_escape_string($dbconnect, $_POST['genre']);
     $cost = mysqli_real_escape_string($dbconnect, $_POST['cost']);
 
+
+    // Cost code (to handle when cost is not specified...)
+    if($cost=="") {
+        $cost_op = ">=";
+        $cost = 0;
+    }
+    else {
+        $cost_op = "<=";
+    }
+
     // In App Purchases...
     if (isset($_POST['in_app'])) {
         $in_app = 0;
@@ -17,6 +27,10 @@
     // Ratings
     $rating_more_less = mysqli_real_escape_string($dbconnect, $_POST['rate_more_less']);
     $rating = mysqli_real_escape_string($dbconnect, $_POST['rating']);
+
+    // if rating is blank, set it to be 'at least' 0
+    if($rating == "") {$rating = 0;
+                     $rating_more_less = "at least";}
 
     if ($rating_more_less == "at least") {
         $rate_op = ">="; // '$' means setting up variable

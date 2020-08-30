@@ -35,7 +35,7 @@
                 
             <select class="search adv" name="genre">
                 
-            <option value="" disabled selected>Genre...</option> 
+            <option value="" selected>Genre...</option> 
                 
             <!--- get options from database -->
                 <?php 
@@ -65,6 +65,10 @@
                 </div>  <!-- /cost label -->
                 
                 <div>
+                    <input class="adv_cost" type="text" name="cost" value="" placeholder="$..."/>
+                </div>  <!-- / cost flex box -->
+                
+                <div>
                     <input class="adv" type="text" name="cost" size="40" value="" placeholder="$..."/>
                 </div>  <!-- /cost input box -->
                 
@@ -81,7 +85,7 @@
                 
                 <div>
                     <select class="search adv" name="rate_more_less">
-                        <option value="" disabled selected>Choose...</option>
+                        <option value="" selected>Choose...</option>
                         <option value="at least">At Least</option>
                         <option value="at most">At Most</option>
                     </select>

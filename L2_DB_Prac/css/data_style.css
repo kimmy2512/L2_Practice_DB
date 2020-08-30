@@ -236,6 +236,11 @@ select {
     font-size: 105%;
 }
 
+.adv-cost {
+    width: 90%;
+    margin-bottom: 5px;
+}
+
 .adv {
     width: 95%;
     margin-bottom: 5px;
