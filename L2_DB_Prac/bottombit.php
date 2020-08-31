@@ -65,7 +65,11 @@
                 </div>  <!-- /cost label -->
                 
                 <div>
+<<<<<<< HEAD
+                    <input class="adv-cost" type="text" name="cost" value="" placeholder="$..."/>
+=======
                     <input class="adv_cost" type="text" name="cost" value="" placeholder="$..."/>
+>>>>>>> 37cb186477c6363ff209aa72bb6881b42f2bda34
                 </div>  <!-- / cost flex box -->
                 
                 <div>
