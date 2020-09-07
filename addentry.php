@@ -17,7 +17,7 @@ $description = "";
 $has_errors = "no";
 
 // Code below excutes when the form is submitted...
-if ($_SEVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "You pushed the button";
     
 }   // end of button submitted code
