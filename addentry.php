@@ -31,11 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             
         <!-- App Name (Required) -->
-        <input class="add-field" type="text" name="app_name" value="<?php echo $app_name; ?>" required placeholder="App Name (required) ..."/>
+        <input class="add-field" type="text" name="app_name" value="<?php echo $app_name; ?>" placeholder="App Name (required) ..."/>
             
         <!-- Subtitle (optional) -->
+        <input class="add-field" type="text" name="subtitle" size="40" value="<?php echo $subtitle; ?>" placeholder="Subtitle (optional) ..."/>
             
         <!-- URL (Required, must start http://) -->
+        <input class="add-field" <?php echo $url_field; ?> type="text" name="url" size="40" value="<?php echo $url; ?>" placeholder="URL (required) ..."/>
             
         <!-- Genre dropdown (required) -->
             
@@ -45,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
         <!-- Rating (Number between 0-5, 1 dp) -->
         <div> 
-            <input class="add-field" type="number" name="rating" value="<?php echo $rating; ?>" required step = "0.1" min=0 max=5 placeholder="Rating (0-5)"/>
+            <input class="add-field" type="number" name="rating" value="<?php echo $rating; ?>" step = "0.1" min=0 max=5 placeholder="Rating (0-5)"/>
         </div>
         
         <!-- # of ratings (integer more than 0) -->
