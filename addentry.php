@@ -44,6 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Age (set to 0 if left blank) -->
             
         <!-- Rating (Number between 0-5, 1 dp) -->
+        <div> 
+            <input class="add-field" type="number" name="rating" value="<?php echo $rating; ?>" required step = "0.1" min=0 max=5 placeholder="Rating (0-5)"/>
+        </div>
         
         <!-- # of ratings (integer more than 0) -->
             
