@@ -28,12 +28,13 @@
     $rating_more_less = mysqli_real_escape_string($dbconnect, $_POST['rate_more_less']);
     $rating = mysqli_real_escape_string($dbconnect, $_POST['rating']);
 
+    
     // if rating is blank, set it to be 'at least' 0
     if($rating == "") {$rating = 0;
                      $rating_more_less = "at least";}
 
     if ($rating_more_less == "at least") {
-        $rate_op = ">="; // '$' means setting up variable
+        $rate_op = ">="; 
     }
 
     elseif($rating_more_less == "at most") {
@@ -41,10 +42,32 @@
     }
 
     else {
-        $rate_op = "<=";
-        $rate_op = 0;
+        $rate_op = ">=";
+        $rating = 0;
         
     } //end rating if / elseif / else
+
+    // Age
+    $age_more_less = mysqli_real_escape_string($dbconnect, $_POST['age_more_less']);
+    $age = mysqli_real_escape_string($dbconnect, $_POST['age']);
+
+    // if rating is blank, set it to be 'at least' 0
+    if($age == "") {$age = 0;
+                     $age_more_less = "at least";}
+
+    if ($age_more_less == "at least") {
+        $age_op = ">="; // '$' means setting up variable
+    }
+
+    elseif($age_more_less == "at most") {
+        $age_op = "<=";
+    }
+
+    else {
+        $age_op = "<=";
+        $age_op = 0;
+        
+    } // end age
 
     $find_sql = "SELECT * FROM `L2_prac_game_details` 
     JOIN `L2_prac_genre` ON (L2_prac_game_details.GenreID = L2_prac_genre.GenreID)
@@ -52,9 +75,10 @@
     WHERE `Name` LIKE '%$app_name%'
     AND `DevName` LIKE '%$developer%'
     AND `Genre` LIKE '%$genre%'
-    AND `Price` <= '$cost'
+    AND `Price` $cost_op $cost
     AND (`In App` = $in_app OR `In App` = 0)
     AND `User Rating` $rate_op $rating
+    AND `Age` $age_op $age
     
     ";
     $find_query = mysqli_query($dbconnect, $find_sql);

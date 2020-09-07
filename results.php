@@ -99,6 +99,17 @@
                     <?php     
                     }  // end price if
                     
+                    
+                    else {
+                        ?>  
+                <br />
+                    Cost: $
+                
+                <?php
+                    echo $find_rs['Price'];
+                        
+                    }
+                    
                     ?>
                 
                 <!--- / Price -->

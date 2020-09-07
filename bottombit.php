@@ -1,6 +1,6 @@
         <div class="box side">
            
-           <h2>Add an App | 
+           <h2><a href="addentry.php">Add an App</a> | 
                <a class="side" href="showall.php">Show All</a></h2>
            
            <form class="searchform" method="post" action="name_dev.php" enctype="multipart/form-data">
@@ -60,23 +60,16 @@
             <!-- Cost -->
             <div class="flex-container">
                 
-                <div class="adv-text">
+                <div class="adv-txt">
                     Cost&nbsp;(less&nbsp;than):
                 </div>  <!-- /cost label -->
-                
+                    
                 <div>
-<<<<<<< HEAD
                     <input class="adv-cost" type="text" name="cost" value="" placeholder="$..."/>
-=======
-                    <input class="adv_cost" type="text" name="cost" value="" placeholder="$..."/>
->>>>>>> 37cb186477c6363ff209aa72bb6881b42f2bda34
                 </div>  <!-- / cost flex box -->
                 
-                <div>
-                    <input class="adv" type="text" name="cost" size="40" value="" placeholder="$..."/>
-                </div>  <!-- /cost input box -->
-                
-                </div>  <!-- /cost flex box -->
+                </div> <!-- / flex container -->
+
                 
             <!-- No In App Checkbox -->
             <input class="adv-txt" type="checkbox" name="in_app" value="0">No In App Purchase
@@ -109,7 +102,7 @@
                 
                 <div>
                     <select class="search adv" name="age_more_less">
-                        <option value="" disabled selected>Choose...</option>
+                        <option value="" selected>Choose...</option>
                         <option value="at least">At Least</option>
                         <option value="at most">At Most</option>
                     </select>
@@ -127,6 +120,8 @@
             </form>
                 
             </div>   <!-- / advanced frame -->
+                
+            </div>
 
             
         </div> <!-- / side bar -->
