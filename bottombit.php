@@ -97,7 +97,7 @@
             <!-- Age -->
             <div class="flex-container">
                 <div class="adv-txt">
-                    Age:
+                    Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>  <!--- /age label -->
                 
                 <div>

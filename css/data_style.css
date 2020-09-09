@@ -211,7 +211,7 @@ input[type="checkbox"] {
 
 /* Puts radio buttons next to each */
 input[type="radio"] {
-    height: 0;
+    /* height: 0; */
     width: auto;
     display: inline;
 }
