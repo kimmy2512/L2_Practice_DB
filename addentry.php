@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Go to success page...
     
     // Get developer ID if it exists...
-        $dev_sql ="";
+        $dev_sql ="SELECT * FROM `L2_prac_developer` WHERE `DevName` LIKE '$dev_name'";
         $dev_query=mysqli_query($dbconnect, $dev_sql);
         $dev_rs=mysqli_fetch_assoc($dev_query);
         $dev_count=mysqli_num_rows($dev_query);
