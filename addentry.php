@@ -46,7 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = mysqli_real_escape_string($dbconnect, $_POST['rating']);
     $rate_count = mysqli_real_escape_string($dbconnect, $_POST['count']);
     $cost = mysqli_real_escape_string($dbconnect, $_POST['price']);
-    $in_app = $_POST['in_app'];
+    
+        // In App purchases...
+    if (isset($_POST['in_app'])) {
+        $in_app = 0;
+    }
+    
+    else {
+        $in_app = 1;
+    }
+    
     $description = mysqli_real_escape_string($dbconnect, $_POST['description']);
     
     // error checking will go here...
@@ -63,6 +72,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dev_count=mysqli_num_rows($dev_query);
     
     // If developer not already in developer table, add them and get the 'new' developerID
+    if ($dev_count > 0) {
+        $developerID = $dev_rs['DeveloperID'];
+    }
+        
+    else {
+        $add_dev_sql = "INSERT INTO `kime69800`.`L2_prac_developer` (`DeveloperID` ,`DevName`)VALUES (NULL , '$dev_name');";
+        $add_deve_query = mysqli_query($dbconnect,$add_dev_sql);
+        
+    // Get developer ID
+    $newdev_sql = "SELECT * FROM `L2_prac_developer` WHERE `DevName` LIKE '$dev_name'";
+    $newdev_query=mysqli_query($dbconnect, $newdev_sql);
+    $newdev_rs=mysqli_fetch_assoc($newdev_query);
+        
+    $developerID = $newdev_rs['DeveloperID'];
+        
+    }   // end adding developer to developer table
     
     // Add entry to database
         
