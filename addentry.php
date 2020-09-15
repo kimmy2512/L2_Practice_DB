@@ -64,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($has_errors == "no") {
     
     // Go to success page...
+        header('Location: add_success.php');
     
     // Get developer ID if it exists...
         $dev_sql ="SELECT * FROM `L2_prac_developer` WHERE `DevName` LIKE '$dev_name'";
