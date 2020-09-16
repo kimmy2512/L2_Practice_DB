@@ -91,6 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }   // end adding developer to developer table
     
     // Add entry to database
+    $addentry_sql = "INSERT INTO `kime69800`.`L2_prac_game_details` (`ID`, `Name`, `Subtitle`, `URL`, `GenreID`, `DeveloperID`, `Age`, `User Rating`, `Rating Count`, `Price`, `In App`, `Description`) VALUES (NULL, 'app_name', 'subtitle', 'url', '2', '3', '16', '5', '1234', '1.99', '1', 'description');";
+    $addentre_query=mysqli_query($dbconnect,$addentry_sql);
         
     } // end of 'no errors' if
     

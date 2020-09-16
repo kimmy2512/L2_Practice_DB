@@ -121,7 +121,7 @@
                 
             </div>   <!-- / advanced frame -->
                 
-            </div>
+           <!-- </div> -->
 
             
         </div> <!-- / side bar -->

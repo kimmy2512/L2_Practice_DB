@@ -244,7 +244,7 @@ select {
 
 .advanced-button {
     margin: auto;
-    width: 95%;
+    width: 85%;
     border-radius: 5px;
     background-color: #2F480D;
     font-size: 105%;
@@ -256,7 +256,7 @@ select {
 }
 
 .adv {
-    width: 95%;
+    width: 85%;
     margin-bottom: 5px;
 }
 
@@ -270,12 +270,12 @@ select {
 /* Extra add-entry styling */
 
 .add-entry{
-    max-width: 550px;
+    width: 85%;
     margin: auto;
 }
 
-.add_field {
-    width: 95%;
+.add-field {
+    width: 85%;
     margin-bottom: 5px;
 }
 

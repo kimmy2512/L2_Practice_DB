@@ -9,6 +9,6 @@
             <p>You have added a game to the database.</p>
             
         
-        <div> <!-- / main -->
+</div> <!-- / main -->
             
     <?php include("bottombit.php") ?>
