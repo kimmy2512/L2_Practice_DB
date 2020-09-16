@@ -91,7 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }   // end adding developer to developer table
     
     // Add entry to database
-    $addentry_sql = "INSERT INTO `kime69800`.`L2_prac_game_details` (`ID`, `Name`, `Subtitle`, `URL`, `GenreID`, `DeveloperID`, `Age`, `User Rating`, `Rating Count`, `Price`, `In App`, `Description`) VALUES (NULL, 'app_name', 'subtitle', 'url', '2', '3', '16', '5', '1234', '1.99', '1', 'description');";
+    $addentry_sql = "INSERT INTO `kime69800`.`L2_prac_game_details` (`ID`, `Name`, `Subtitle`, `URL`, `GenreID`, `DeveloperID`, `Age`, `User Rating`, `Rating Count`, `Price`, `In App`, `Description`) 
+    VALUES (NULL, '$app_name', '$subtitle', '$url', '$genreID', '$developerID', '$age', '$rating', '$rate_count', '$cost', '$in_app', '$description');";
     $addentre_query=mysqli_query($dbconnect,$addentry_sql);
         
     } // end of 'no errors' if
@@ -109,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             
         <!-- App Name (Required) -->
-        <input class="add-field" type="text" name="app_name" value="<?php echo $app_name; ?>" placeholder="App Name (required) ..."/>
+        <input class="add-field" type="text" name="app_name" value="<?php echo $app_name; ?>" required placeholder="App Name (required) ..."/>
             
         <!-- Subtitle (optional) -->
         <input class="add-field" type="text" name="subtitle" size="40" value="<?php echo $subtitle; ?>" placeholder="Subtitle (optional) ..."/>
@@ -124,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php 
             if($genreID=="") {
                 ?>
-            <option value="" selected>Genre (Choose something)....</option>
+            <option value="" disabled selected>Genre (Choose something)....</option>
             <?php
             }
             
