@@ -285,3 +285,27 @@ input[type=text] {
     font-size: 95%;
     padding: 10px;
 }
+
+/* form error CSS */
+
+/* field backgrounds */
+.form-ok {
+    background-color:#fff;
+}
+
+.form-error {
+    background-color: #ff9e9e;
+}
+
+/*error messages */
+.no-error {
+    display: none;
+}
+
+.error-text {
+    color: darkred;
+}
+
+.defaulted {
+    color: darkgreen;
+}
