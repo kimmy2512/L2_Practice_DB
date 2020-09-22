@@ -100,6 +100,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
         
     // Check age is an integer, it is blank, set it to zero
+    if (!ctype_digit($age) || $age < 0) {         /* || means 'OR' */
+        $has_errors = "yes";
+        $count_error = "error-text";
+        $count_field = "form-error";
+        $age_message = "Age must be an integer more than zero";
+    }
         
     // Check rating is a decimal between 0 and 5
     if (!is_numeric($rating) || $rating < 0 || $rating > 5) {
